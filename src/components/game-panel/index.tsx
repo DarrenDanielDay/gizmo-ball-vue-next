@@ -188,44 +188,6 @@ export const PlayingGamePanel = defineComponent({
   },
 });
 
-const StaticPanel = defineComponent({
-  props: {
-    items: {
-      type: Array as PropType<StaticMapItem[]>,
-      required: true,
-    },
-  },
-  setup(props) {
-    return () => {
-      const { items } = props;
-      <>
-        {items.map((item, i) => (
-          <MapItemComponent key={i} mapItem={item} />
-        ))}
-      </>;
-    };
-  },
-});
-
-const MovingsPanel = defineComponent({
-  props: {
-    items: {
-      type: Array as PropType<MovingMapItem[]>,
-      required: true,
-    },
-  },
-  setup(props) {
-    return () => {
-      const { items } = props;
-      <>
-        {items.map((item, i) => {
-          return <MapItemComponent key={i} mapItem={item} />;
-        })}
-      </>;
-    };
-  },
-});
-
 export const DOMBoostPlayingGamePanel = defineComponent({
   props: {
     statics: { type: Array as PropType<StaticMapItem[]>, required: true },
