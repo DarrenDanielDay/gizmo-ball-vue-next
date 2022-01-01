@@ -1,14 +1,15 @@
-import { defineComponent } from "vue";
-import { HelloWorld } from "./components/hello-world";
+import { defineComponent, provide } from "vue";
 import "./app.css";
-import logo from './assets/logo.png';
+import { SaveLoadService$$ } from "./services/save-load";
+import { browserSaveLoadService } from "./services/save-load/browser";
+import { GameMainView } from "./views/game-main";
 export const App = defineComponent({
   setup() {
+    provide(SaveLoadService$$, browserSaveLoadService);
     return () => (
-      <>
-        <img alt="Vue logo" src={logo} />
-        <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-      </>
+      <div id="game-container">
+        <GameMainView></GameMainView>
+      </div>
     );
   },
 });

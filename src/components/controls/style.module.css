@@ -1,0 +1,38 @@
+.mode-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.show {
+  visibility: visible;
+}
+.hide {
+  visibility: hidden;
+}
+.control-row {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 40px;
+  grid-template-columns: 6fr 10fr 6fr;
+}
+.mode-col {
+  width: 20px;
+}
+.button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  width: 110px;
+  cursor: pointer;
+}
+.controll-img {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.span {
+  font-family: fantasy;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
